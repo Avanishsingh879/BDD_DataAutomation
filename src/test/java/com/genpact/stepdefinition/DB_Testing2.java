@@ -11,23 +11,18 @@ public class DB_Testing2 {
 	
 	
 	
-	//Database connection with Selenium Date 23-02-2024
+	//Database connection with Selenium Date 10-03-2024
 	
 	public static void main(String args[]) throws ClassNotFoundException, SQLException {
 		
 		Class.forName("com.mysql.jdbc.Driver");
-		Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/campus", "root", "Mathura@!0809");
+		Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/Campus", "root", "Mathura@!0809");
 		Statement smt=con.createStatement();
-		ResultSet rs=smt.executeQuery("select * from campus.Item");
-		
+		ResultSet rs=smt.executeQuery("select * from Campus.Item");
 		while(rs.next()) {
 			
-			String fistname=rs.getString("FirstName");
-			System.out.println(fistname);
-			
-			
+			String FirstName=rs.getString("FirstName");
+			System.out.println(FirstName);
 		}
-		
-		System.out.println("Database connected Data:23-2-24");
 	}
 }
