@@ -11,7 +11,7 @@ public class DB_Testing2 {
 	
 	
 	
-	//Database connection with Selenium Date 19-6-2024
+	//Database connection with Selenium Date 1-7-2024
 	
 	public static void main(String args[]) throws ClassNotFoundException, SQLException {
 		
@@ -23,11 +23,14 @@ public class DB_Testing2 {
 		
 		while(rs.next()) {
 			
-			String firstname=rs.getString("FirstName");
-			System.out.println(firstname);
+			String FirstName=rs.getString("FirstName");
+			
+			System.out.println(FirstName);
 		}
 		
 		System.out.println("DataBase Connected");
 		
 	}
+	
+	
 }
